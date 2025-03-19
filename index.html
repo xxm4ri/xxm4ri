@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bikes Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>E-Bikes Store</h1>
+        </div>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="products">
+            <div class="product-card">
+                <img src="https://placehold.co/300x200" alt="Mountain E-Bike">
+                <h3>Mountain E-Bike Pro</h3>
+                <p class="price">R$ 12.999,00</p>
+                <p class="description">Bike elétrica ideal para trilhas e montanhas, com bateria de longa duração.</p>
+                <button onclick="openModal(1, 'Mountain E-Bike Pro', 12999.00)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/300x200" alt="Urban E-Bike">
+                <h3>Urban E-Bike Comfort</h3>
+                <p class="price">R$ 8.999,00</p>
+                <p class="description">Perfeita para mobilidade urbana, design moderno e confortável.</p>
+                <button onclick="openModal(2, 'Urban E-Bike Comfort', 8999.00)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/300x200" alt="Sport E-Bike">
+                <h3>Sport E-Bike Speed</h3>
+                <p class="price">R$ 15.999,00</p>
+                <p class="description">Bike elétrica esportiva com alto desempenho e velocidade máxima.</p>
+                <button onclick="openModal(3, 'Sport E-Bike Speed', 15999.00)">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+
+        <!-- Modal de quantidade -->
+        <div id="quantity-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Selecione a Quantidade</h2>
+                <div class="quantity-selector">
+                    <button onclick="decrementQuantity()">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="10">
+                    <button onclick="incrementQuantity()">+</button>
+                </div>
+                <button onclick="addToCart()">Confirmar</button>
+            </div>
+        </div>
+
+        <!-- Carrinho de Compras -->
+        <div id="shopping-cart" class="cart-panel">
+            <h2>Carrinho de Compras</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3>Total: R$ <span id="cart-total">0,00</span></h3>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Bikes Store. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
