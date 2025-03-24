@@ -142,7 +142,7 @@ button:hover {
     margin: 1rem 0;
 }
 
-.quantity-selector input {
+quantity-selector input {
     width: 60px;
     text-align: center;
     padding: 0.5rem;
@@ -150,17 +150,17 @@ button:hover {
 
 /* Cart Panel */
 .cart-panel {
-    display: none;
+    display: none; /* Oculto por padrão */
     position: fixed;
-    top: 0;
     right: 0;
+    top: 0;
     width: 300px;
     height: 100%;
-    background-color: white;
-    padding: 2rem;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
     overflow-y: auto;
-    z-index: 999;
+    z-index: 1000;
 }
 
 .cart-panel.active {
@@ -199,4 +199,109 @@ footer {
     .cart-panel {
         width: 100%;
     }
+}
+
+.modal-product-details {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.modal-product-image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-product-info {
+    flex: 1;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cart-actions button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.cart-actions button:first-child {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.cart-actions button:last-child {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.payment-total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.payment-item-image {
+    width: 60px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.payment-item-details {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
 }

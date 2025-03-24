@@ -4,15 +4,24 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 updateCartCount();
 
 // Funções do Modal
-function openModal(id, name, price) {
-    currentProduct = { id, name, price };
+function openModal(productId, productName, productPrice, productDescription, productImage) {
+    // Preencher os detalhes do modal
+    document.getElementById('modal-product-name').textContent = productName;
+    document.getElementById('modal-product-description').textContent = productDescription;
+    document.getElementById('modal-product-price').textContent = productPrice.toFixed(2).replace('.', ',');
+    document.getElementById('modal-product-image').src = productImage;
+
+    // Exibir o modal
     document.getElementById('quantity-modal').style.display = 'block';
-    document.getElementById('quantity').value = 1;
 }
 
 function closeModal() {
     document.getElementById('quantity-modal').style.display = 'none';
-    currentProduct = null;
+}
+function proceedToPayment() {
+    showToast('Redirecionando para a página de pagamento...');
+    // Aqui você pode adicionar lógica para redirecionar para a página de pagamento real
+    closePaymentModal();
 }
 
 function incrementQuantity() {
@@ -31,36 +40,45 @@ function decrementQuantity() {
 
 // Funções do Carrinho
 function addToCart() {
-    if (!currentProduct) return;
+    // Capturar os dados do modal
+    const productName = document.getElementById('modal-product-name').textContent;
+    const productPrice = parseFloat(document.getElementById('modal-product-price').textContent.replace(',', '.'));
+    const productQuantity = parseInt(document.getElementById('quantity').value, 10);
+    const productImage = document.getElementById('modal-product-image').src;
 
-    const quantity = parseInt(document.getElementById('quantity').value);
-    const existingItem = cart.find(item => item.id === currentProduct.id);
+    // Verificar se o produto já está no carrinho
+    const existingProduct = cart.find(item => item.name === productName);
 
-    if (existingItem) {
-        existingItem.quantity += quantity;
+    if (existingProduct) {
+        // Atualizar a quantidade se o produto já estiver no carrinho
+        existingProduct.quantity += productQuantity;
     } else {
+        // Adicionar novo produto ao carrinho
         cart.push({
-            id: currentProduct.id,
-            name: currentProduct.name,
-            price: currentProduct.price,
-            quantity: quantity
+            name: productName,
+            price: productPrice,
+            quantity: productQuantity,
+            image: productImage
         });
     }
 
-    // Salvar no localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
-    
+    // Atualizar o contador do carrinho
     updateCartCount();
-    updateCartDisplay();
+
+    // Atualizar o carrinho na interface
+    updateCartUI();
+
+    // Fechar o modal
     closeModal();
 
-    // Feedback visual
-    alert('Produto adicionado ao carrinho!');
+    // Abrir o carrinho
+    openCart();
 }
 
 function updateCartCount() {
-    const count = cart.reduce((total, item) => total + item.quantity, 0);
-    document.getElementById('cart-count').textContent = count;
+    const cartCountElement = document.getElementById('cart-count');
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCountElement.textContent = totalItems;
 }
 
 function formatPrice(price) {
@@ -105,8 +123,12 @@ function removeFromCart(productId) {
 
 function toggleCart() {
     const cartPanel = document.getElementById('shopping-cart');
-    cartPanel.classList.toggle('active');
-    updateCartDisplay();
+    // Alternar a visibilidade do carrinho
+    if (cartPanel.style.display === 'block') {
+        cartPanel.style.display = 'none';
+    } else {
+        cartPanel.style.display = 'block';
+    }
 }
 
 // Fechar o carrinho quando clicar fora dele
@@ -133,3 +155,102 @@ window.onclick = function(event) {
 document.addEventListener('DOMContentLoaded', () => {
     updateCartDisplay();
 });
+
+function updateCartUI() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartTotalElement = document.getElementById('cart-total');
+
+    // Limpar o conteúdo atual do carrinho
+    cartItemsContainer.innerHTML = '';
+
+    // Atualizar os itens do carrinho
+    let total = 0;
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+            <div class="cart-item-details">
+                <h4>${item.name}</h4>
+                <p>Quantidade: ${item.quantity}</p>
+                <p>Preço: R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}</p>
+            </div>
+        `;
+        cartItemsContainer.appendChild(cartItem);
+    });
+
+    // Atualizar o total do carrinho
+    cartTotalElement.textContent = total.toFixed(2).replace('.', ',');
+}
+
+function openCart() {
+    const cartPanel = document.getElementById('shopping-cart');
+    cartPanel.style.display = 'block';
+}
+
+function closeCart() {
+    const cartPanel = document.getElementById('shopping-cart');
+    cartPanel.style.display = 'none';
+}
+
+function openPaymentModal() {
+    const paymentModal = document.getElementById('payment-modal');
+    const paymentItemsContainer = document.getElementById('payment-items');
+    const paymentTotalElement = document.getElementById('payment-total');
+
+    // Limpar o conteúdo atual do modal de pagamento
+    paymentItemsContainer.innerHTML = '';
+
+    // Adicionar os itens do carrinho ao modal de pagamento
+    let total = 0;
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        const paymentItem = document.createElement('div');
+        paymentItem.classList.add('payment-item');
+        paymentItem.innerHTML = `
+            <div class="payment-item-details">
+                <img src="${item.image}" alt="${item.name}" class="payment-item-image">
+                <div>
+                    <h4>${item.name}</h4>
+                    <p>Quantidade: ${item.quantity}</p>
+                    <p>Preço unitário: R$ ${item.price.toFixed(2).replace('.', ',')}</p>
+                    <p>Subtotal: R$ ${itemTotal.toFixed(2).replace('.', ',')}</p>
+                </div>
+            </div>
+        `;
+        paymentItemsContainer.appendChild(paymentItem);
+    });
+
+    // Atualizar o total no modal de pagamento
+    paymentTotalElement.textContent = total.toFixed(2).replace('.', ',');
+
+    // Exibir o modal de pagamento
+    paymentModal.style.display = 'block';
+}
+
+function closePaymentModal() {
+    const paymentModal = document.getElementById('payment-modal');
+    paymentModal.style.display = 'none';
+}
+
+function proceedToPayment() {
+    showToast('Redirecionando para a página de pagamento...');
+    // Aqui você pode redirecionar para uma página de pagamento real
+    closePaymentModal();
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.className = 'toast show';
+
+    // Remover o toast após 3 segundos
+    setTimeout(() => {
+        toast.className = 'toast';
+    }, 3000);
+}
