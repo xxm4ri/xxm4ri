@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Cor de Fundo */
+body {
+    background-color: #e6ee9fce;
+}
+
+/* Cabeçario */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, hwb(300 35% 41% / 0.747), #8a4f8ad2);
+    color: rgba(228, 228, 151, 0.623);
+    position: relative;
+    top: 0;
+    z-index: 100;
+}
+
+/* Nome da logo*/
+.logo h1 {
+    margin: 0;
+    font-size: 4.2rem;
+}
+
+/* Distancia do menu*/
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+/*Tamanho do menu*/
+.menu ul li a {
+    text-decoration: none;
+    color: rgb(206, 219, 118);
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #ae2766b0;
+    /* Cor ao passar o mouse */
+}
+
+main {
+    padding: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/*Rodapé*/
+footer {
+    background-color: #ac42a6a2;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

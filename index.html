@@ -1,113 +1,218 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Bikes Store</title>
+    <title>Sobre - Brilhana</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <h1>E-Bikes Store</h1>
+            <h1>BRILHANA</h1>
         </div>
         <nav class="menu">
-            <ul>
-                <li><a href="#products">Produtos</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="cart-icon" onclick="toggleCart()">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count">0</span>
-        </div>
-    </header>
 
-    <main>
-        <section class="products">
-            <div class="product-card">
-                <img src="https://placehold.co/300x200" alt="Mountain E-Bike">
-                <h3>Mountain E-Bike Pro</h3>
-                <p class="price">R$ 12.999,00</p>
-                <p class="description">Bike elétrica ideal para trilhas e montanhas, com bateria de longa duração.</p>
-                <button onclick="openModal(1, 'Mountain E-Bike Pro', 12999.00, 'Bike elétrica ideal para trilhas e montanhas, com bateria de longa duração.', 'https://placehold.co/300x200')">Adicionar ao Carrinho</button>
-            </div>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Barra de Pesquisa</title>
+                <!-- Adicione o Font Awesome -->
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                <style>
 
-            <div class="product-card">
-                <img src="https://placehold.co/300x200" alt="Urban E-Bike">
-                <h3>Urban E-Bike Comfort</h3>
-                <p class="price">R$ 8.999,00</p>
-                <p class="description">Perfeita para mobilidade urbana, design moderno e confortável.</p>
-                <button onclick="openModal(2, 'Urban E-Bike Comfort', 8999.00, 'Perfeita para mobilidade urbana, design moderno e confortável.', 'https://placehold.co/300x200')">Adicionar ao Carrinho</button>
-            </div>
+                </style>
+            </head>
 
-            <div class="product-card">
-                <img src="https://placehold.co/300x200" alt="Sport E-Bike">
-                <h3>Sport E-Bike Speed</h3>
-                <p class="price">R$ 15.999,00</p>
-                <p class="description">Bike elétrica esportiva com alto desempenho e velocidade máxima.</p>
-                <button onclick="openModal(3, 'Sport E-Bike Speed', 15999.00, 'Bike elétrica esportiva com alto desempenho e velocidade máxima.', 'https://placehold.co/300x200')">Adicionar ao Carrinho</button>
-            </div>
-        </section>
+            <body>
+                <form class="search-container" action="/pesquisar" method="get">
+                    <input type="text" class="search-input" placeholder="Pesquisar..." name="q">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i> <!-- Ícone de lupa do Font Awesome -->
 
-        <!-- Modal de quantidade -->
-<div id="quantity-modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div class="modal-product-details">
-            <img id="modal-product-image" src="" alt="Produto" class="modal-product-image">
-            <div class="modal-product-info">
-                <h2 id="modal-product-name">Nome do Produto</h2>
-                <p id="modal-product-description">Descrição do Produto</p>
-                <p class="price">R$ <span id="modal-product-price">0,00</span></p>
-            </div>
-        </div>
-        <h3>Selecione a Quantidade</h3>
-        <div class="quantity-selector">
-            <button onclick="decrementQuantity()">-</button>
-            <input type="number" id="quantity" value="1" min="1" max="10">
-            <button onclick="incrementQuantity()">+</button>
-        </div>
-        <button onclick="addToCart()">Confirmar</button>
-    </div>
+                    </button>
+                </form>
+            </body>
+
+</html>
+
+<ul>
+    <li><a href="index.html">Produtos</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+
+</nav>
+
 </div>
 
-        <!-- Carrinho de Compras -->
-        <div id="shopping-cart" class="cart-panel">
-            <h2>Carrinho de Compras</h2>
-            <div id="cart-items"></div>
-            <div class="cart-total">
-                <h3>Total: R$ <span id="cart-total">0,00</span></h3>
-            </div>
-            <div class="cart-actions">
-                <button onclick="closeCart()">Continuar Comprando</button>
-                <button onclick="openPaymentModal()">Ir para Pagamento</button>
-            </div>
+<div class="cart-icon" onclick="toggleCart()">
+    <img style="" src="cart2.svg" alt="Carrinho de Compras">
+    <span id="cart-count">0</span>
+</div>
+</header>
+
+<!-- Produtos do site -->
+
+<main>
+    <section class="products">
+
+        <div class="product-card">
+            <img src="anelverde.webp" ">
+                <h3>Anel Pedra verde em Prata 925</h3>
+                <p class=" price">R$ 326,00</p>
+            <button onclick="openModal(6, 'Anel Pedra verde em Prata 925', 326.00, 'anelverde.webp')">Adicionar ao
+                Carrinho</button>
         </div>
 
-        <!-- Modal de Pagamento -->
-        <div id="payment-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closePaymentModal()">&times;</span>
-                <h2>Resumo do Pedido</h2>
-                <div id="payment-items"></div>
-                <div class="payment-total">
-                    <h3>Total: R$ <span id="payment-total">0,00</span></h3>
+
+        <div class="product-card">
+            <img src="anelouro.webp">
+            <h3>Anel Ouro 20k </h3>
+            <p class="price">R$ 440,00</p>
+            <button onclick="openModal(3, 'Anel Ouro 20k',440.00, 'anelouro.webp')">Adicionar
+                ao Carrinho</button>
+        </div>
+
+        <div class="product-card">
+
+            <img src="daysi.webp">
+            <h3>Anel Daisy em Prata 925</h3>
+            <p class="price">R$ 105,00</p>
+            <button onclick="openModal(2, 'Anel Daisy em Prata 925', 105.00, 'daysi.webp')">Adicionar ao
+                Carrinho</button>
+        </div>
+
+        <div class="product-card">
+            <img src="pulseiraourobranco.webp" ">
+                <h3>Pulseira Reali em Ouro Branco 18k </h3>
+                <p class=" price">R$ 1.700,00</p>
+            <button
+                onclick="openModal(4, 'Pulseira Reali em Ouro Branco 18k ', 1700.00, 'pulseiraourobranco.webp')">Adicionar
+                ao
+                Carrinho</button>
+        </div>
+
+        <div class="product-card">
+            <img src="pulseirareali.webp">
+            <h3>Pulseira Reali em Ouro Amarelo 18k</h3>
+            <p class="price">R$ 1.500,00</p>
+            <button
+                onclick="openModal(1, 'Pulseira Reali em Ouro Amarelo 18k', 1500.00, 'pulseirareali.webp')">Adicionar
+                ao Carrinho</button>
+        </div>
+
+        <div class="product-card">
+            <img src="riviera.webp">
+            <h3>Pulseira Riviera em Prata 925 com Topázios Incolores</h3>
+            <p class="price">R$ 1550,00</p>
+            <button
+                onclick="openModal(1, 'Pulseira Riviera em Prata 925 com Topázios Incolores  ', 1550.00, 'riviera.webp')">Adicionar
+                ao Carrinho</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="brincoprata.webp">
+            <h3>Brinco Chains em Prata 925 </h3>
+            <p class="price">R$ 110,00</p>
+            <button onclick="openModal(5, 'Brinco Chains em Prata 925 k', 110.00, 'brincoprata.webp')">Adicionar ao
+                Carrinho</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="tulum.webp">
+            <h3>Brinco Santorini em Prata 925</h3>
+            <p class="price">R$ 200,00</p>
+            <button onclick="openModal(2, 'Brinco Santorini em Prata 925', 200.00, 'tulum.webp')">Adicionar ao
+                Carrinho</button>
+        </div>
+
+        <div class="product-card">
+            <img src="diamantes.webp">
+            <h3>Brinco em Ouro Branco 18k</h3>
+            <p class="price">R$ 210,00</p>
+            <button onclick="openModal(1, 'Brinco em Ouro Branco 18k', 210.00, 'diamantes.webp')">Adicionar
+                ao Carrinho</button>
+        </div>
+
+
+
+
+    </section>
+
+    <!-- Modal de quantidade -->
+
+    <div id="quantity-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-product-details">
+                <img id="modal-product-image" src="" alt="Produto" class="modal-product-image">
+                <div class="modal-product-info">
+                    <h2 id="modal-product-name">Nome do Produto</h2>
+                    <p id="modal-product-description">Descrição do Produto</p>
+                    <p class="price">R$ <span id="modal-product-price">0,00</span></p>
                 </div>
-                <button onclick="proceedToPayment()">Ir para Pagamento</button>
             </div>
+            <h3>Selecione a Quantidade</h3>
+            <div class="quantity-selector">
+                <button onclick="decrementQuantity()">-</button>
+                <input type="number" id="quantity" value="1" min="1" max="10">
+                <button onclick="incrementQuantity()">+</button>
+            </div>
+            <button onclick="addToCart()">Confirmar</button>
         </div>
+    </div>
 
-        <div id="toast" class="toast"></div>
-    </main>
+    <!-- Carrinho de Compras -->
 
-    <footer>
-        <p>&copy; 2024 E-Bikes Store. Todos os direitos reservados.</p>
-    </footer>
+    <div id="shopping-cart" class="cart-panel">
+        <br>
+        <br>
+        <br>
+        <h2>Carrinho de Compras</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total: R$ <span id="cart-total">0,00</span></h3>
+        </div>
+        <div class="cart-actions">
+            <button onclick="closeCart()">Continuar Comprando</button>
+            <button onclick="openPaymentModal()">Ir para Pagamento</button>
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Modal de Pagamento -->
+
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+            <h2>Resumo do Pedido</h2>
+            <div id="payment-items"></div>
+            <div class="payment-total">
+                <h3>Total: R$ <span id="payment-total">0,00</span></h3>
+            </div>
+            <button onclick="proceedToPayment()">Ir para Pagamento</button>
+        </div>
+    </div>
+
+    <!-- Rodape -->
+
+    <div id="toast" class="toast"></div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Brilhana. Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>

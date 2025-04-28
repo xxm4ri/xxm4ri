@@ -4,10 +4,9 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 updateCartCount();
 
 // Funções do Modal
-function openModal(productId, productName, productPrice, productDescription, productImage) {
+function openModal(productId, productName, productPrice, productImage) {
     // Preencher os detalhes do modal
     document.getElementById('modal-product-name').textContent = productName;
-    document.getElementById('modal-product-description').textContent = productDescription;
     document.getElementById('modal-product-price').textContent = productPrice.toFixed(2).replace('.', ',');
     document.getElementById('modal-product-image').src = productImage;
 
@@ -91,7 +90,7 @@ function formatPrice(price) {
 function updateCartDisplay() {
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
-    
+
     cartItems.innerHTML = '';
     let total = 0;
 
@@ -135,16 +134,16 @@ function toggleCart() {
 document.addEventListener('click', (e) => {
     const cartPanel = document.getElementById('shopping-cart');
     const cartIcon = document.querySelector('.cart-icon');
-    
-    if (cartPanel.classList.contains('active') && 
-        !cartPanel.contains(e.target) && 
+
+    if (cartPanel.classList.contains('active') &&
+        !cartPanel.contains(e.target) &&
         !cartIcon.contains(e.target)) {
         cartPanel.classList.remove('active');
     }
 });
 
 // Fechar o modal quando clicar fora dele
-window.onclick = function(event) {
+window.onclick = function (event) {
     const modal = document.getElementById('quantity-modal');
     if (event.target == modal) {
         closeModal();
@@ -253,4 +252,8 @@ function showToast(message) {
     setTimeout(() => {
         toast.className = 'toast';
     }, 3000);
+
+
+
+
 }
