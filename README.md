@@ -1,30 +1,35 @@
-## 💜 Olá, meu nome é Mariana!
+# Olá, eu sou a Mariana! 👋
 
-Sou estudante de Desenvolvimento de Sistemas no SENAI e estou em busca de uma oportunidade de trabalho na área, com preferência por vagas home office. 
+## 👨‍💻 Sobre mim
+Atualmente estou fazendo curso de desenvolvimento de sistemas pelo Senai. Sou uma entusiasta de tecnologia que acredita que o código é a ferramenta para transformar ideias em realidade. 
 
-🔭 Estou aprendendo lógica de programação em Java e Programação com arduino.
 
-💬 Escreva uma mensagem para que as pessoas entrem em contato com você, ou te faça perguntas.
-
----
-
-## 🚀 Minhas Skills
-
-<code><img height="32" src="https://cdn.iconscout.com/icon/free/png-512/c-programming-569564.png" alt="c"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="Javascript"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" alt="Typescript"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" alt="Nodejs"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" alt="HTML5"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" alt="CSS"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" alt="Bootstrap"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" alt="React"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png" alt="Angular"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" alt="MySQL"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png" alt="PostegreSQL"/><code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png" alt="MongoDB"/></code>
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FF69B4&center=true&vCenter=true&width=435&lines=Desenvolvedora+em+formação...;Aluna+do+SENAI;16+anos+de+puro+código!">
+</div>
 
 ---
 
-## ⭐ GitHub Stats
+## 🛠 Minhas Stacks
+<div align="left">
+  <img src="https://skillicons.dev/icons?i=html,css,js,java,mysql,git" />
+</div>
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=iuricode&show_icons=true)
+---
+
+### 📁 Projetos
+
+
+---
+
+## 🤝 Entre em contato
+<div align="left">
+  <a href="mailto:marianavifranco@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/mariana-franco-b8428b286/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+</div>
+
+---
+
+<div align="center">
+  <strong>"A prática leva à permanência."</strong> ✨
+</div>
