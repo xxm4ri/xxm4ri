@@ -12,7 +12,7 @@ Atualmente sou formada em Desenvolvimento de Sistemas pelo Senai e estou em busc
 
 ## 🛠 Minhas Stacks
 <div align="left">
-  <img src="https://skillicons.dev/icons?i=html,css,js,java,mysql,git" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,java,mysql,postgres,spring,git,github,vscode" />
 </div>
 
 ---
