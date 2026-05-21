@@ -1,11 +1,10 @@
 # Olá, eu sou a Mariana! 👋
 
 ## 👨‍💻 Sobre mim
-Atualmente estou fazendo curso de desenvolvimento de sistemas pelo Senai. Sou uma entusiasta de tecnologia que acredita que o código é a ferramenta para transformar ideias em realidade. 
-
+Atualmente sou formada em Desenvolvimento de Sistemas pelo Senai e estou em busca da minha primeira oportunidade profissional para continuar aprendendo e evoluindo na área. Sou uma entusiasta de tecnologia que acredita que o código é a ferramenta para transformar ideias em realidade.
 
   <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FF69B4&center=true&vCenter=true&width=435&lines=Desenvolvedora+em+formação...;Aluna+do+SENAI;Codando+aos+16+anos!">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FF69B4&center=true&vCenter=true&width=435&lines=Desenvolvedora+em+formação...;Aluna+do+SENAI;Codando+aos+1+anos!">
 </div>
 </div>
 
